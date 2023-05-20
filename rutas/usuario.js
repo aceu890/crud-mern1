@@ -6,6 +6,7 @@ const eschema = mongoose.Schema
 
 const eschemausuario = new eschema({
     nombre: String,
+    mascota: String,
     email: String,
     telefono: String,
     idusuario: String
@@ -23,6 +24,7 @@ module.exports = router
 router.post('/agregarusuario', (req, res) => {
     const nuevousuario = new ModeloUsuario({
         nombre: req.body.nombre,
+        mascota: req.body.mascota,
         email: req.body.email,
         telefono: req.body.telefono,
         idusuario: req.body.idusuario,
@@ -63,6 +65,7 @@ router.post('/actualizausuario', (req, res) => {
     
     ModeloUsuario.findOneAndUpdate({idusuario:req.body.idusuario}, {
         nombre: req.body.nombre,
+        nombre: req.body.mascota,
         email: req.body.email,
         telefono: req.body.telefono
     }, (err) => {

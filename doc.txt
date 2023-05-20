@@ -1,0 +1,6 @@
+   {/* color palette:  
+        #1E1E1E => background, 
+        #ECECEC => text color, 
+        #e3a466 => btn, 
+        #f1c395 => btn hover 
+    */}
